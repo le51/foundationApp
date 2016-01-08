@@ -1,0 +1,15 @@
+---
+name: home
+url: /
+controller: HomeController
+
+---
+
+<div class="grid-content">
+	<h1>Welcome to Foundation for Apps!</h1>
+	<div ng-repeat="post in posts">
+		<h4><img src={{post.media}}><a ui-sref="post/{{post.id}}">{{post.title}}</a></h4>
+		{{post.intro}}
+		<hr />
+	</div>
+</div>
