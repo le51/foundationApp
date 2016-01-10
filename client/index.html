@@ -3,148 +3,31 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>zChat</title>
-    <link href="assets/css/app.css" rel="stylesheet" type="text/css">
+    <title>My App</title>
+    <link href="./assets/css/app.css" rel="stylesheet" type="text/css">
     <script src="./assets/js/foundation.js"></script>
     <script src="./assets/js/templates.js"></script>
     <script src="./assets/js/routes.js"></script>
     <script src="./assets/js/app.js"></script>
+    <style>
+      .active{background:#ccc;}
+    </style>
   </head>
-
-  <style>
-    .message-input, .message-input .inline-label, .menu-bar {margin-bottom: 0;}
-    #sidebar, .messages {border-right: 1px solid #eee;}
-    .message-side-bar {border-left: 1px solid #eee;}
-  </style>
-
   <body>
-    <div class="grid-frame secondary">
-
-      <div class="grid-block collapse medium-9 large-9 vertical">
-        <div id="header" class="shrink collapse grid-content">
+    <div class="grid-frame vertical">
+      <div class="grid-content shrink" style="padding: 0;">
           <ul class="menu-bar primary">
+            <li><a ui-sref="home.index"><strong>My App</strong></a></li>
+            <li ng-class="{active: $state.includes('computer')}"><a ui-sref="computer.index">Computer</a></li>
+            <li ng-class="{active: $state.includes('music')}"><a ui-sref="music.index">Music</a></li>
+            <li ng-class="{active: $state.includes('sailing')}"><a ui-sref="sailing.index">Sailing</a></li>
+            <li ng-class="{active: $state.includes('gliding')}"><a ui-sref="gliding.index">Gliding</a></li>
+            <li ng-class="{active: $state.includes('contact')}"><a ui-sref="contact">Contact</a></li>
             <li class="hide-for-medium"><a zf-open="sidebar" href="#">Menu</a></li>
-            <li><a ui-sref="home"><strong>Sometips.net</strong></a></li>
-            <li><a ui-sref="computer">Computer</a></li>
-            <li><a ui-sref="music">Music</a></li>
-            <li><a ui-sref="sailing">Sailing</a></li>
-            <li><a ui-sref="gliding">Gliding</a></li>
-            <li><a ui-sref="contact">Contact</a></li>
           </ul>
-        </div>
-        <div class="grid-block">
-          <div class="grid-block small-8 medium-8 vertical">
-            <div ui-view="viewA"></div>
-          </div>
-          <div class="grid-block small-4 medium-84vertical">
-            <div ui-view="viewB"></div>
-          </div>
-        </div>
-        <div class="grid-block">
-          <div class="grid-block small-12 medium-12 vertical">
-            <div class="ui-view ">
-              
-            </div>
-          </div>
-
-        </div>
       </div>
-
-      <div zf-panel position="left" id="sidebar" class="medium-grid-block collapse medium-3 large-3 vertical">
-        <div class="grid-content collapse shrink hide-for-medium">
-          <a href="" class="secondary button expand" zf-close>Close</a>
-        </div>
-        <div class="grid-content collapse shrink">
-          <img src="http://placehold.it/400x150&text=Logo">
-        </div>
-        <div class="grid-content">
-          <section class="block-list">
-            <header>Computers</header>
-            <ul>
-              <li>
-                <a href="#">
-                  Programming
-                  <span class="float-right badge">7</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  Server
-                  <span class="float-right badge">2</span>
-                </a>
-              </li>
-              <li>
-                <a class="success" href="#">
-                  Hosting
-                  <span class="float-right badge">2</span>
-                </a>
-              </li>
-            </ul>
-          </section>
-
-          <section class="block-list">
-            <header>Music</header>
-            <ul>
-              <li>
-                <a href="#">
-                  It's alive
-                  <span class="float-right badge">2</span>
-                </a>
-              </li>
-              <li>
-                <a class="success" href="#">
-                  RIP
-                  <span class="float-right badge">2</span>
-                </a>
-              </li>
-            </ul>
-          </section>
-          <section class="block-list">
-            <header>Fun time</header>
-            <ul>
-              <li>
-                <a ui-sref="gliding">
-                  Gliding
-                  <span class="float-right badge">2</span>
-                </a>
-              </li>
-              <li>
-                <a class="success" ui-sref="sailing">
-                  Sailing
-                  <span class="float-right badge">2</span>
-                </a>
-              </li>
-            </ul>
-          </section>
-
-          <div class="grid-content collapse v-align">
-						<div class="dark card align-bottom">
-							<img src="http://placekitten.com/g/400/200">
-							<div class="card-divider">
-								Meet me in Marseille, Or send me a note
-							</div>
-							<div class="card-section">
-									<form>
-										<textarea rows="4" cols="50"></textarea>
-										<div class="grid-block">
-											<div class="small-8 medium-8 grid-content">
-												<input type="text" placeholder="Email adress">
-											</div>
-											<div class="small-4 medium-4 grid-content">
-												<label>
-													<a class="button" href="#">Submit</a>
-												</label>
-											</div>
-										</div>
-									</form>
-							</div>
-						</div>
-        	</div>
-        </div>
+      <div ui-view class="grid-content">
       </div>
-
     </div>
   </body>
 </html>
-
-<!-- ui-view  -->

@@ -1,9 +1,35 @@
 ---
 name: computer
-url: /computer/
+abstract: true
+url: /computer
+controller: PostController
 ---
 
-<div class="grid-container">
-  <h1>Computer</h1>
-  <p class="lead">hey</p>
+
+<div class="grid-content">
+  <div class="grid-block">
+    <div id="main" class="medium-9 large9 grid-block vertical">
+      <div ui-view></div>
+    </div>
+    <div zf-panel position="right" id="sidebar" class="medium-grid-block collapse medium-3 large-3 vertical">
+        <div class="grid-content collapse shrink hide-for-medium">
+          <a href="" class="secondary button expand" zf-close>Close</a>
+        </div>
+        <div class="grid-content collapse shrink">
+          <img src="http://placekitten.com/g/400/200">
+        </div>
+        <div class="grid-content">
+          <div class="grid-content collapse v-align">
+						<div class="dark card align-bottom">
+							<img src="http://placekitten.com/g/400/200">
+							<div class="card-divider">
+								Meet me in Marseille, Or send me a note
+							</div>
+							
+						</div>
+        	</div>
+        </div>
+      </div>
+  </div>
+
 </div>

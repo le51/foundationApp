@@ -1,5 +1,0 @@
----
-name: post
-url: /post/:id
-controller: PostController
----

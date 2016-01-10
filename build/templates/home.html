@@ -1,9 +1,101 @@
 
 <div class="grid-content">
-	<h1>Welcome to Foundation for Apps!</h1>
-	<div ng-repeat="post in posts">
-		<h4><img src={{post.media}}><a ui-sref="post/{{post.id}}">{{post.title}}</a></h4>
-		{{post.intro}}
-		<hr />
-	</div>
+  <div class="grid-block">
+    <div id="main" class="medium-9 large9 grid-block vertical">
+      <div ui-view class="grid-content"></div>
+    </div>
+    <div zf-panel position="right" id="sidebar" class="medium-grid-block collapse medium-3 large-3 vertical">
+        <div class="grid-content collapse shrink hide-for-medium">
+          <a href="" class="secondary button expand" zf-close>Close</a>
+        </div>
+        <div class="grid-content collapse shrink">
+          <img src="http://placehold.it/400x150&text=Logo">
+        </div>
+        <div class="grid-content">
+          <section class="block-list">
+            <header>Computers</header>
+            <ul>
+              <li>
+                <a href="#">
+                  Programming
+                  <span class="float-right badge">7</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Server
+                  <span class="float-right badge">2</span>
+                </a>
+              </li>
+              <li>
+                <a class="success" href="#">
+                  Hosting
+                  <span class="float-right badge">2</span>
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <section class="block-list">
+            <header>Music</header>
+            <ul>
+              <li>
+                <a href="#">
+                  It's alive
+                  <span class="float-right badge">2</span>
+                </a>
+              </li>
+              <li>
+                <a class="success" href="#">
+                  RIP
+                  <span class="float-right badge">2</span>
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section class="block-list">
+            <header>Fun time</header>
+            <ul>
+              <li>
+                <a ui-sref="gliding">
+                  Gliding
+                  <span class="float-right badge">2</span>
+                </a>
+              </li>
+              <li>
+                <a class="success" ui-sref="sailing">
+                  Sailing
+                  <span class="float-right badge">2</span>
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <div class="grid-content collapse v-align">
+						<div class="dark card align-bottom">
+							<img src="http://placekitten.com/g/400/200">
+							<div class="card-divider">
+								Meet me in Marseille, Or send me a note
+							</div>
+							<div class="card-section">
+									<form>
+										<textarea rows="4" cols="50"></textarea>
+										<div class="grid-block">
+											<div class="small-8 medium-8 grid-content">
+												<input type="text" placeholder="Email adress">
+											</div>
+											<div class="small-4 medium-4 grid-content">
+												<label>
+													<a class="button" href="#">Submit</a>
+												</label>
+											</div>
+										</div>
+									</form>
+							</div>
+						</div>
+        	</div>
+        </div>
+      </div>
+  </div>
+
 </div>
