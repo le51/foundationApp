@@ -1,0 +1,13 @@
+---
+name: home.index
+url: ""
+---
+
+<div class="grid-container">
+  <h2>this is index template</h2>
+	<div ng-repeat="post in posts">
+		<h4><img src={{post.media}}><a ui-sref="post/{{post.id}}">{{post.title}}</a></h4>
+		{{post.intro}}
+		<hr />
+	</div>
+</div>
