@@ -9,6 +9,10 @@
     <script src="./assets/js/templates.js"></script>
     <script src="./assets/js/routes.js"></script>
     <script src="./assets/js/app.js"></script>
+    <style>
+      .active{background:#ccc;}
+      .bottom{position:absolute;bottom:0;}
+    </style>
   </head>
   <body>
     <div class="grid-frame vertical">
